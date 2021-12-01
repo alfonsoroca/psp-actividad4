@@ -25,5 +25,4 @@ public class Coche implements Serializable {
 	public String toString() {
 		return "Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", precio=" + precio + "]";
 	}
-
 }

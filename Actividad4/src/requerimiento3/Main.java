@@ -71,6 +71,8 @@ public class Main {
 					System.out.println("Mensaje descifrado: " + mensaje);
 					break;
 
+				// Se solicitan los datos de un coche que posteriormente se pasa como argumento
+				// al llamar al método estático cifrarCoche()
 				case 4:
 					System.out.println("Introduce los datos del coche a cifrar...");
 					System.out.println("Introduce matrícula...");

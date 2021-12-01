@@ -5,7 +5,8 @@ import javax.crypto.SecretKey;
 
 public class MaquinaCifrado {
 
-	// Método estático para cifrar
+	// Método estático para cifrar al que se le pasan como parámetros el mensaje a
+	// cifrar, el cifrador de la clase Cipher y la sk de la clase SecretKey
 	public static byte[] cifrar(String mensaje, Cipher cifrador, SecretKey sk) {
 
 		try {
@@ -15,7 +16,7 @@ public class MaquinaCifrado {
 
 			// Ciframos el mensaje introducido trabajando en bytes
 			byte[] bytesMensaje = mensaje.getBytes();
-			byte[] bytesMensajeCifrado = cifrador.doFinal(bytesMensaje);			
+			byte[] bytesMensajeCifrado = cifrador.doFinal(bytesMensaje);
 			System.out.println("Realizado cifrado de: " + mensaje);
 			return bytesMensajeCifrado;
 
@@ -26,7 +27,9 @@ public class MaquinaCifrado {
 		}
 	}
 
-	// Método estático para descifrar
+	// Método estático para descifrar al que se le pasan como parámetros el cifrador
+	// de la clase Cipher, la sk de la clase SecretKey y el mensaje cifrado en un
+	// array de bytes
 	public static String descifrar(Cipher cifrador, SecretKey sk, byte[] bytesMensajeCifrado) {
 
 		try {

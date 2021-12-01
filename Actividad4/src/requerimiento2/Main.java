@@ -20,7 +20,7 @@ public class Main {
 		int opcion = 8;
 
 		try {
-			
+
 			System.out.println("---------Máquina de cifrado---------\n");
 			// Creamos el generador de claves
 			KeyGenerator kg = KeyGenerator.getInstance("AES");
@@ -35,7 +35,7 @@ public class Main {
 			System.out.println("Cifrador generado...");
 
 			do {
-				
+
 				System.out.println("\n-----Elige la opción que deseas-----");
 				System.out.println("	0. Salir");
 				System.out.println("	1. Encriptar frase");
@@ -45,7 +45,8 @@ public class Main {
 
 				try {
 					opcion = Integer.parseInt(sc.nextLine());
-				} catch (NumberFormatException e) {}
+				} catch (NumberFormatException e) {
+				}
 
 				switch (opcion) {
 
@@ -69,7 +70,9 @@ public class Main {
 					mensaje = new String(MaquinaCifrado.descifrar(cifrador, sk, bytesMensajeCifrado));
 					System.out.println("Mensaje descifrado: " + mensaje);
 					break;
-					
+
+				// Se solicitan los datos de un coche que posteriormente se pasa como argumento
+				// al llamar al método estático cifrarCoche()
 				case 4:
 					System.out.println("Introduce los datos del coche a cifrar...");
 					System.out.println("Introduce matrícula...");
